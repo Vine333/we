@@ -1,0 +1,206 @@
+.WrapperFooter {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -50px;
+    padding: 20px 50px;
+    background-color: #263238;
+
+
+}
+
+.footerText {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.footerUs {
+    background-color: #263238;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 150px;
+    gap: 15px;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a :hover {
+    color: gray;
+}
+
+.socialIcons {
+    scale: 2;
+    padding-left: 25px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.footerAboutUs {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+
+
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+    gap: 15px;
+}
+
+.company a {
+    color: white;
+    cursor: pointer;
+}
+
+.company a:hover {
+    color: gray;
+
+}
+
+.company h4 {
+    color: white;
+}
+
+.support a {
+    color: white;
+    cursor: pointer;
+}
+
+.support h4 {
+    color: white;
+}
+
+.support a:hover {
+    color: gray;
+
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    gap: 15px;
+}
+
+.stayup {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+
+    flex-direction: column;
+}
+
+.email {
+    border-radius: 50%;
+    align-items:center;
+    position: relative;
+
+}
+
+input[type="email"]::placeholder {
+    color: #b3b3b3;
+}
+
+.input {
+    background-color: gray;
+    color: #ffffff;
+    border: none;
+    position: absolute;
+    border-radius: 10px;
+    cursor: pointer;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.air {
+    scale: 2.5;
+    position: relative;
+    padding-right: 5px;
+
+
+
+}
+
+.ecri {
+    background-color: gray;
+    color: #ffffff;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    border-radius: 10px;
+    position: relative;
+
+}
+@media (max-width: 767px) {
+    .footerUs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footerLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .footerAboutUs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .company{
+        padding: 0;
+        margin: 0;
+    }
+    .support{
+        padding: 0;
+        margin: 0;
+    }
+    .stayup{
+        padding: 0;
+        margin: 0;
+    }
+    .company h4{
+        font-size: 20px;
+    }.stayup h4{
+         font-size: 20px;
+     }.support h4{
+          font-size: 20px;
+      }
+
+}
+@media (max-width: 1024px) {
+    .stayup{
+        margin-right: 30px;
+    }
+}

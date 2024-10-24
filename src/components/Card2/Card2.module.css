@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0.5rem 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+
+
+}
+
+.cardContent {
+    padding: 16px;
+
+
+}
+.caring p {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.caring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-content p {
+    margin: 0 0 20px;
+}
+
+.card-content button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-content button:hover {
+    background-color: #218838;
+}
+@media(max-width: 767px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

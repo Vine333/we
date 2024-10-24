@@ -1,0 +1,43 @@
+.block1{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.manie{
+    padding-right:20rem ;
+}
+.illustration{
+    scale: 1;
+}
+.mine_txt{
+    font-size: 38px;
+    color: #4CAF4F;
+}
+.mine_sms{
+    color: #263238;
+    font-size: 38px;
+}
+.Wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F5F7FA;
+    margin: 20px -60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+@media(max-width: 900px){
+    .block1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+.manie{
+    order: 1;
+    padding-right: 0px;
+    padding-bottom: 30px;
+}
+.illustration{
+    order: 2;
+}
+}

@@ -1,0 +1,31 @@
+/* Menu.css */
+.menu {
+    display: none; /* Скрываем меню по умолчанию */
+    background-color: white;
+    position: absolute; /* Для наложения на контент */
+    top: 70px; /* Отступ от кнопки */
+    right: 30px;
+    width: 100%;
+    border: 1px solid #ccc; /* Оформление */
+    z-index: 1000; /* Чтобы меню было поверх других элементов */
+}
+
+.menu.open {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    color: black;
+    padding: 15px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+.menu a{
+    color: black;
+    padding: 15px 16px;
+}
+
+.menu a:hover {
+    background-color: #ddd; /* Эффект при наведении */
+}

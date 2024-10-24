@@ -1,11 +1,45 @@
-.link{
+.link {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     gap: 20px;
     padding-top:8px ;
     cursor: pointer;
+    color:black;
+    align-items: center;
+    column-gap: 20px;
+    background-color: #FFFFFF;
+    margin-left: 210px;
+    padding-inline: 32px;
+
 }
-.link:hover{
+.link a{
+    color: black;
+}
+.link a:hover{
     color: #535bf2;
+}
+.burgerMenu{
+display: none;
+}
+.burger2{
+    display: none;
+}
+.Regbtn{
+    margin-left: 30px;
+}
+
+@media (max-width: 1023px) {
+    .link {
+        display: none;
+    }
+
+    .btnheader {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    body{
+
+    }
 }
