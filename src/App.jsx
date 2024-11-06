@@ -7,11 +7,13 @@ import LogsOur from "./Components/LogsOur/LogsOur";
 import Manage from "./Components/Manage/Manage.jsx";
 import Card from "./Components/Card/Card.jsx";
 import PictureAndText from "./Components/PictureAndText/PictureAndText.jsx";
-import {ways} from './Components/Array/array.js'
 import HelpingLocal from "./Components/HelpingaLocal/HelpingLocal.jsx";
 import Tesla from "./Components/Tesla/Tesla.jsx";
 import Card2 from "./Components/Card2/Card2.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
+
+import {ways} from "./Components/PictureAndText/PictureAndText.jsx";
+
 
 function App() {
 
@@ -24,9 +26,9 @@ function App() {
         <LogsOur/>
         <Manage/>
         <Card/>
-        <PictureAndText {...ways[0]}  />
+        <PictureAndText item={ways[0]}  />
         <HelpingLocal/>
-        <PictureAndText {...ways[1]} />
+        <PictureAndText item={ways[1]}/>
         <Tesla/>
         <Card2/>
         <Footer/>

@@ -4,59 +4,62 @@ import People from '../img/people.svg'
 import Heands from '../img/heands.svg'
 import Wallet from '../img/wallet.svg'
 import styled from 'styled-components'
-import classes from './HelpingLocal.module.css'
+
 
 const HelpingLocal = () => {
     return (<Wrapper>
-            <div className={classes.frame6}>
-                <div className={classes.fr6text}>
-                    <span>Helping a local </span><br/>
-                    <span className={classes.BusinessReinventItself}>business reinvent itself</span>
-                    <div className={classes.opis}>We reached here with our hard work and dedication</div>
-                </div>
+        <Frame6>
+            <Frame6text>
+                <span>Helping a local </span><br/>
+                <Busines>business reinvent itself</Busines><br/>
+                <Opis>We reached here with our hard work and dedication</Opis>
+            </Frame6text>
 
-                <div className={classes.det1}>
-                    <div className={classes.memberscount}>
-                        <div className={classes.peoplefoto}>
-                            <img src={People} alt=""/></div>
-                        <div className={classes.count}>
-                            <h1>2,245,341</h1>
-                            <p>Members</p>
-                        </div>
-                    </div>
-                    <div className={classes.eventbook}>
-                        <div className={classes.memfoto}>
-                            <img src={Click} alt=""/></div>
-                        <div className={classes.count}>
-                            <h1>828,867</h1>
-                            <p>Event Bookings</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={classes.det2}>
-                    <div className={classes.club}>
-                        <div className={classes.clubfoto}>
-                            <img src={Heands}/></div>
-                        <div className={classes.count}>
-                            <h1>46,328</h1>
-                            <p>Clubs</p>
-                        </div>
-                    </div>
-                    <div className={classes.pay}>
-                        <div className={classes.payfoto}>
-                            <img src={Wallet}/>
-                        </div>
-                        <div className={classes.count}>
-                            <h1>
-                                1,926,436
-                            </h1>
-                            <p>Payments</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Det>
+                <Names>
+                    <LogoFoto>
+                        <img src={People} alt=""/>
+                    </LogoFoto>
+                    <Count>
+                        <h1>2,245,341</h1>
+                        <p>Members</p>
+                    </Count>
+                </Names>
+                <Names>
+                    <LogoFoto>
+                        <img src={Click} alt=""/>
+                    </LogoFoto>
+                    <Count>
+                        <h1>828,867</h1>
+                        <p>Event Bookings</p>
+                    </Count>
+                </Names>
+            </Det>
+            <Det2>
+                <Names >
+                    <LogoFoto>
+                        <img src={Heands}/>
+                    </LogoFoto>
+                    <Count>
+                        <h1>46,328</h1>
+                        <p>Clubs</p>
+                    </Count>
+                </Names>
+                <Names>
+                    <LogoFoto>
+                        <img src={Wallet}/>
+                    </LogoFoto>
+                    <Count >
+                        <h1>
+                            1,926,436
+                        </h1>
+                        <p>Payments</p>
+                    </Count>
+                </Names>
+            </Det2>
+        </Frame6>
 
-        </Wrapper>);
+    </Wrapper>);
 };
 
 export default HelpingLocal;
@@ -64,15 +67,80 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   background-color: #F5F7FA;
-  margin: 20px -60px;
+  
   padding-top: 20px;
   padding-bottom: 20px;
 `
-let frame6 = styled.div`
+const Frame6 = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  gap: 90px;
+  @media (max-width: 767px) {
+    
+      
+      flex-direction: column;
+    }
+`
+const Frame6text = styled.div`
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 28px;
+  @media(max-width: 767px){
+    order: 1
+  }
+
+`
+const Busines = styled.span`
+  color: #28cb8b
+`
+
+const Det = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media(max-width: 767px){
+    order: 2;
+  }
+  `
+const Det2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media(max-width: 767px){
+    order: 3;
+  }
+
+`
+const LogoFoto = styled.div`
+  
+  scale: 2;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 35px;
+  padding-right: 15px;
+  
+`
+const Opis = styled.span`
+  font-size: 16px;
+`
+const Names = styled.div`
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #f5f7fa;
+  @media(max-width: 767px){
+  
+    
+  }
+`
+
+
+
+const Count= styled.div`
+  text-align: left;
+ p{
+   padding-bottom: 30px;
+   margin-bottom: 20px;
+ }
 `

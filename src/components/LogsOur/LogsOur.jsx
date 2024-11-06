@@ -7,17 +7,17 @@ import logo5 from '../img/1.svg'
 import logo6 from '../img/2.svg'
 
 import {styled} from 'styled-components'
-import classes from './LogsOur.module.css'
+
 
 export default function LogsOur() {
     return (
-        <div className={classes.block2}>
-            <h2 className={classes.ourclient}>
+        <div>
+            <Our>
                 Our Clients
-            </h2>
-            <p className="bl2ps">
+            </Our>
+            <Parag>
                 We have been working with some Fortune 500+ clients
-            </p>
+            </Parag>
             <Logo >
                 <img src={logo1}/>
                 <img src={logo2}/>
@@ -35,4 +35,11 @@ const Logo = styled.div`
   justify-content: space-evenly;
  
 `
-
+const Our = styled.h2`
+  padding-top: 20px;
+  margin-bottom: -15px;
+  padding-bottom: 20px;
+`
+const Parag = styled.p`
+padding: 10px;
+`
