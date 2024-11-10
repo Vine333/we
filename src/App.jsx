@@ -11,8 +11,10 @@ import HelpingLocal from "./Components/HelpingaLocal/HelpingLocal.jsx";
 import Tesla from "./Components/Tesla/Tesla.jsx";
 import Card2 from "./Components/Card2/Card2.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
-
 import {ways} from "./Components/PictureAndText/PictureAndText.jsx";
+import Api from "./Components/Api/Api.jsx";
+import APPPIII from "./Components/APPPIII/APPPIII";
+import POST from "./Components/POST/POST";
 
 
 function App() {
@@ -32,6 +34,9 @@ function App() {
         <Tesla/>
         <Card2/>
         <Footer/>
+        <Api/>
+        <APPPIII/>
+          <POST/>
     </>
   )
 }
