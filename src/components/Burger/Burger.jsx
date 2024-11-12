@@ -16,7 +16,7 @@ const BurgerButton = () => {
                 <Bar open={isOpen} />
                 <Bar open={isOpen} />
             </BurgerBtn>
-            <Menu Open={isOpen} />
+            <Menu open={isOpen} />
         </Dp>
     );
 };
@@ -42,7 +42,7 @@ const Bar = styled.div`
   width: 30px;
   height: 4px;
   background-color: black;
-  margin: 4px 0;
+  margin: 2px 3px;
   transition: all 0.5s ease;
 
   &:nth-child(1) {

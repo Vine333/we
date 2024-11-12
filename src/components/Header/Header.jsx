@@ -10,6 +10,7 @@ import BurgerButton from "../Burger/Burger";
 const Header = () => {
     return (
         <HeaderWrapper>
+            <Container>
             <div className="logo">
                 <img src={AppLogo} alt="Logo" />
             </div>
@@ -24,6 +25,7 @@ const Header = () => {
                 Register Now
             </BtnHeader>
             <BurgerButton />
+            </Container>
         </HeaderWrapper>
     );
 };
@@ -32,25 +34,44 @@ export default Header;
 
 const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  color: #1a1a1a;
-  padding-inline: 50px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  //border: 1px solid black;
 `;
-
+ const Container = styled.div`
+   width: 80%;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   color: #1a1a1a;
+   padding:5px;
+   //border: 1px solid black;
+   .logo{
+     //border: 1px solid black;
+   }
+   @media(max-width: 1023px){
+     justify-content: space-between;
+   }
+ `
 const NavLinks = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex: 1;
   flex-direction: row;
-  gap: 20px;
-  padding-top: 8px;
-  cursor: pointer;
+  justify-content: end;
   color: black;
-  align-items: center;
+  a{
+    cursor: pointer;
+  }
+  //border: 1px solid black;
+  
   column-gap: 20px;
   background-color: #FFFFFF;
-  margin-left: 210px;
-  padding-inline: 32px;
+  padding-right: 20px;
+  
+ 
 
   a {
     color: black;
@@ -72,7 +93,7 @@ const BtnHeader = styled.button`
   border: 1px #717171;
   border-radius: 5px;
   cursor: pointer;
-
+  //border: 1px solid black;
   &:hover {
     background: #4CAF4F;
     border-radius: 4px;

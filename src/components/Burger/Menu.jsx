@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 
 const MenuWrapper = styled.div`
-  display: ${({ isOpen }) => ( isOpen ? 'flex' : 'none')};
+  display: ${({ open}) => ( open ? 'flex' : 'none')};
   background-color: white;
   position: absolute;
   top: 70px;
@@ -14,7 +14,7 @@ const MenuWrapper = styled.div`
   border: 1px solid #ccc;
   z-index: 1000;
 
-  ${({ isOpen }) => isOpen && `
+  ${({ open }) => open&& `
     flex-direction: column;
     width: 150px;
     color: black;
@@ -33,9 +33,9 @@ const MenuLink = styled.a`
   }
 `;
 
-const Menu = ({ Open }) => {
+const Menu = ({ open }) => {
     return (
-        <MenuWrapper isOpen={Open}>
+        <MenuWrapper open={open}>
 
                 <MenuLink href='#'>Home</MenuLink>
                 <MenuLink href='#'>Features</MenuLink>

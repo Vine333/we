@@ -13,10 +13,10 @@ const Tesla = () => {
 
         <Wrapper>
             <Conteiner>
-                <Imgtesla>
+                <div className="tesla">
                     <img src={TeslaF}/>
-                </Imgtesla>
-                <Text>
+                </div>
+                <div className="text">
                     <div >
                         Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum
                         risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam
@@ -28,11 +28,11 @@ const Tesla = () => {
                         ac sit amet magna.
                     </div>
                     <div>
-                        <TS>Tim Smith</TS>
+                        <span className="TimSmith">Tim Smith</span>
                         <p>British Dragon Boat Racing Association</p>
 
                     </div>
-                    <LogoMeet>
+                    <div className='logoTeslaCont'>
                         <img src={logo1}/>
                         <img src={logo2}/>
                         <img src={logo3}/>
@@ -40,9 +40,9 @@ const Tesla = () => {
                         <img src={logo5}/>
                         <img src={logo6}/>
                         <a href="#">Meet all customers 🠒</a>
-                    </LogoMeet>
+                    </div>
 
-                </Text>
+                </div>
             </Conteiner>
         </Wrapper>
 
@@ -50,71 +50,74 @@ const Tesla = () => {
 };
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: #F5F7FA;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100vw;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  //border: 1px solid black;
+ 
  
 `
 const Conteiner = styled.div`
   display: flex;
+  width: 80%;
   flex-direction: row;
-  justify-content: space-evenly;
+  color: #1a1a1a;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-inline: 50px; 
   gap: 20px;
-  @media (max-width:767px ) {
-      align-items: center;
+  
+  padding: 20px;
+  .tesla{
+    
+    
+    width: 30%;
+    
+    img{
+     scale: 2;
+    }
+  }
+  .text{
+    display: flex;
+
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+    gap: 20px;
+    width: 70%;
+  }
+  .TimSmith{
+    color: #28cb8b;
+    padding-bottom: 20px;
+  }
+  .logoTeslaCont{
+    display: flex;
+    justify-content: space-between;
+    a{
+      padding-top: 5px;
+      color: #28cb8b;
+    }
+  }
+  @media (max-width:1024px ) {
+    
       justify-content: center;
       flex-wrap: wrap;
       padding-top: 50px;
       flex-direction: column;
-      padding-inline: 0px;
+      
+    .text{
+      order: 2;
+      padding-top: 60px;
+      width: 100%;
+    } 
+    .tesla{
+      order: 1;
+      padding-top: 20px;
     }
-`
-const  Imgtesla = styled.div`
-  display: flex;
-
-  scale: 2;
-  padding-top: 40px;
-  padding-left: 120px;
-  @media (max-width:767px ) {
-
-
-    order: 1;
-    padding: 0;
   }
-`
-const Text = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-left: 230px;
-  padding-top: 50px;
-  text-align: left;
-  gap: 20px;
-  @media (max-width:767px ) {
-
-
-    order: 2;
-    padding-inline: 50px;
-    padding-top: 60px;
-  }
-
   
 `
 
-const TS = styled.div`
-  color: #28cb8b;
-`
-const LogoMeet = styled.div`
-  display: flex;
-  justify-content: space-between;
-  a{
-    padding-top: 5px;
-    color: #28cb8b;
-  }
-`
 
 export default Tesla;

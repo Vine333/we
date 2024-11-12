@@ -1,44 +1,39 @@
-
-
 import './App.css'
 import Header from "./Components/Header/Header.jsx";
 import MineContent from "./Components/MineContent/MineContent.jsx";
 import LogsOur from "./Components/LogsOur/LogsOur";
 import Manage from "./Components/Manage/Manage.jsx";
-import Card from "./Components/Card/Card.jsx";
 import PictureAndText from "./Components/PictureAndText/PictureAndText.jsx";
-import HelpingLocal from "./Components/HelpingaLocal/HelpingLocal.jsx";
 import Tesla from "./Components/Tesla/Tesla.jsx";
-import Card2 from "./Components/Card2/Card2.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import {ways} from "./Components/PictureAndText/PictureAndText.jsx";
-import Api from "./Components/Api/Api.jsx";
-import APPPIII from "./Components/APPPIII/APPPIII";
-import POST from "./Components/POST/POST";
+import styled from 'styled-components'
+import Achievements from "./Components/HelpingaLocal/HelpingLocal.jsx";
+import CardMarketing from "./Components/Card2/Card2.jsx";
 
 
 function App() {
 
 
-  return (
+    return (
 
-    <>
-        <Header/>
-        <MineContent/>
-        <LogsOur/>
-        <Manage/>
-        <Card/>
-        <PictureAndText item={ways[0]}  />
-        <HelpingLocal/>
-        <PictureAndText item={ways[1]}/>
-        <Tesla/>
-        <Card2/>
-        <Footer/>
-        <Api/>
-        <APPPIII/>
-          <POST/>
-    </>
-  )
+        <>
+            <Container>
+                <Header/>
+                <MineContent/>
+                <LogsOur/>
+                <Manage/>
+                <PictureAndText item={ways[0]}/>
+                <Achievements/>
+                <PictureAndText item={ways[1]}/>
+                <Tesla/>
+                <CardMarketing/>
+                <Footer/>
+            </Container>
+        </>)
 }
 
+const Container = styled.div`
+  width: 100%;
+`
 export default App
