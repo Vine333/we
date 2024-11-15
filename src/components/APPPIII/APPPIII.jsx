@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import error from "eslint-plugin-react/lib/util/error.js";
-
 const Apppiii = () => {
     const[users,setUsers]=useState([])
     useEffect(()=>{

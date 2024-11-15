@@ -1,11 +1,7 @@
 import React from 'react';
 import Button from "../Button/Button.jsx";
-import Nexcent from '../img/Nexcent.svg'
-import NSocial from '../img/Social Icons.svg'
-import Social2 from '../img/Social2.svg'
-import Social3 from '../img/Social3.svg'
-import Social4 from '../img/Social4.svg'
-import qir from '../img/qir.svg'
+import {NexcentFooterLogo,PaperAir} from '../../assets/SVG/index.js'
+import {ICYouTube,ICTwitter,ICBrowser,ICInstagram} from '../../assets/Icons/index.js'
 import styled from 'styled-components'
 
 const Footer = () => {
@@ -17,24 +13,24 @@ const Footer = () => {
                 Get a Demo 🠒
             </Button>
         </div>
-        <WrapperFooter>
-            <Container>
+        <div className='WrapperFooter'>
+            <div className='Container'>
                 <div className="footerLogo">
-                    <img src={Nexcent}/>
+                    <NexcentFooterLogo/>
                     <p>Copyright © 2020 Landify UI Kit.</p>
                     <p>All rights reserved</p>
                     <div className="socialIcons">
                         <a href="https://www.instagram.com/yourusername" target="_blank">
-                            <img src={NSocial} alt="Instagram-Icon"/>
+                            <ICInstagram alt="Instagram-Icon"/>
                         </a>
                         <a href="https://www.google.com" target="_blank">
-                            <img src={Social2} alt="b-Icon"/>
+                            <ICBrowser alt="b-Icon"/>
                         </a>
                         <a href="https://www.twitter.com" target="_blank">
-                            <img src={Social3} alt="Twitter-Icon"/>
+                            <ICTwitter alt="Twitter-Icon"/>
                         </a>
                         <a href="https://www.youtube.com" target="_blank">
-                            <img src={Social4} alt="YouTube-Icon"/>
+                            <ICYouTube alt="YouTube-Icon"/>
                         </a>
 
                     </div>
@@ -65,7 +61,7 @@ const Footer = () => {
                             <input className="input" type="email" name="email" placeholder="Your email address"
                                    />
                             <button className='sendMessage'>
-                                <img className="img" src={qir}/>
+                                <PaperAir className="img" />
                             </button>
 
 
@@ -73,174 +69,26 @@ const Footer = () => {
 
                     </div>
                 </div>
-            </Container>
-        </WrapperFooter>
+            </div>
+        </div>
 
     </Wrapper>);
 };
 
-const WrapperFooter = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0;
-  background-color: #263238;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-`
-const Container = styled.div`
-  background-color: #263238;
-  display: flex;
-  width: 90%;
-  justify-content: space-evenly;
-  .footerLogo{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 15px;
-    color: white;
-  }
-  .socialIcons{
-    scale: 2;
-    padding-left: 25px;
-    gap: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: start;
-  }
-  .aboutUsandHelp{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 15px;
-    width: 70%;
-  }
-  .Company{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    h4{
-      color: #FFFFFF;
-      font-size: 20px;
-    }
-    a {
-      color: white;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    text-align: left;
-
-  }
-  .support{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
-    h4{
-      color: #FFFFFF;
-      font-size: 20px;
-    }
-  }
-  .form{
-    color: white;
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: left;
-    flex-direction: column;
-  }
-  .fromEmail{
-    border-radius: 50%;
-    align-items: center;
-    position: relative;
-  }
-  .input{
-    background-color: gray;
-    color: #ffffff;
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 50px;
-    padding-left: 15px;
-    border-radius: 10px;
-    position: relative;
-    &::placeholder {
-      color: #ffffff;
-      padding: 10px;
-    }
-  }
-  .sendMessage{
-    background-color: gray;
-    color: #ffffff;
-    border: none;
-    position: absolute;
-    border-radius: 10px;
-    cursor: pointer;
-    right: 0;
-    padding-top: 10px;
-    padding-right: 5px;
-  }
-  .img{
-    scale: 2.5;
-    position: relative;
-    padding-right: 5px;
-  }
-  @media (max-width: 1024px) {
-    .socialIcons{
-      padding-left: 0px;
-    }
-.aboutUsandHelp{
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  
-}
-    .footerLogo{
-      align-items: center;
-      padding: 0;
-    }
-    
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    
-.Company{
-  justify-content: center;
-  align-items: center;
-  
-  gap: 0px;
-  h4 {
-    font-size: 20px;
-  }
-}
-.support{
-  gap: 0px;
-  justify-content: center;
-  align-items: center;
-  h4 {
-    font-size: 20px;
-  }
 
 
-}
-.form{
-  
-  text-align: center;
-  h4 {
-    font-size: 20px;
-  }
-
-  
-}
-
-
-}
-  `
 const Wrapper = styled.div`
-  
+  .WrapperFooter{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    background-color: #263238;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
   .footerBtnText{
     display: flex;
     justify-content: center;
@@ -256,6 +104,153 @@ const Wrapper = styled.div`
 
   a:hover {
     color: gray;
+  }
+  .Container{
+    background-color: #263238;
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+  }
+    .footerLogo{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 15px;
+      color: white;
+    }
+    .socialIcons{
+      scale: 2;
+      padding-left: 25px;
+      gap: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: start;
+    }
+    .aboutUsandHelp{
+      display: flex;
+      justify-content: space-evenly;
+      gap: 15px;
+      width: 70%;
+    }
+    .Company{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      h4{
+        color: #FFFFFF;
+        font-size: 20px;
+      }
+      
+      text-align: left;
+
+    }
+    .support{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+      h4{
+        color: #FFFFFF;
+        font-size: 20px;
+      }
+      
+    }
+    .form{
+      color: white;
+      display: flex;
+      flex-wrap: nowrap;
+      text-align: left;
+      flex-direction: column;
+    }
+    .fromEmail{
+      border-radius: 50%;
+      align-items: center;
+      position: relative;
+    }
+    .input{
+      background-color: gray;
+      color: #ffffff;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 50px;
+      padding-left: 15px;
+      border-radius: 10px;
+      position: relative;
+      &::placeholder {
+        color: #ffffff;
+        padding: 10px;
+      }
+    }
+    .sendMessage{
+      background-color: gray;
+      color: #ffffff;
+      border: none;
+      position: absolute;
+      border-radius: 10px;
+      cursor: pointer;
+      right: 0;
+      padding-top: 10px;
+      padding-right: 5px;
+    }
+    .img{
+      scale: 2.5;
+      position: relative;
+      padding-right: 5px;
+    }
+    @media (max-width: 1024px) {
+      .socialIcons{
+        padding-left: 0;
+      }
+      .aboutUsandHelp{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+      }
+      .footerLogo{
+        align-items: center;
+        padding: 0;
+      }
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+
+      .Company{
+        justify-content: center;
+        align-items: center;
+
+        gap: 0;
+        h4 {
+          font-size: 20px;
+        }
+      }
+      .support{
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        h4 {
+          font-size: 20px;
+        }
+
+
+      }
+      .form{
+
+        text-align: center;
+        h4 {
+          font-size: 20px;
+        }
+
+
+      }
+
+
+    
   }
 `
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {styled} from "styled-components";
-import AppLogo from "../img/Logo.svg"
+import {AppLogo} from "../../assets/SVG/index.js"
 import BurgerButton from "../Burger/Burger";
 
 
@@ -12,7 +12,7 @@ const Header = () => {
         <HeaderWrapper>
             <Container>
             <div className="logo">
-                <img src={AppLogo} alt="Logo" />
+                <AppLogo/>
             </div>
             <NavLinks>
                 <a className="home">Home</a>
@@ -30,7 +30,7 @@ const Header = () => {
     );
 };
 
-export default Header;
+
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -48,10 +48,6 @@ const HeaderWrapper = styled.header`
    flex-direction: row;
    color: #1a1a1a;
    padding:5px;
-   //border: 1px solid black;
-   .logo{
-     //border: 1px solid black;
-   }
    @media(max-width: 1023px){
      justify-content: space-between;
    }
@@ -63,24 +59,15 @@ const NavLinks = styled.div`
   justify-content: end;
   color: black;
   a{
+    color: black;
     cursor: pointer;
   }
-  //border: 1px solid black;
-  
   column-gap: 20px;
   background-color: #FFFFFF;
   padding-right: 20px;
-  
- 
-
-  a {
-    color: black;
-  }
-
   a:hover {
     color: #535bf2;
   }
-
   @media (max-width: 1023px) {
     display: none;
   }
@@ -93,7 +80,6 @@ const BtnHeader = styled.button`
   border: 1px #717171;
   border-radius: 5px;
   cursor: pointer;
-  //border: 1px solid black;
   &:hover {
     background: #4CAF4F;
     border-radius: 4px;
@@ -104,4 +90,4 @@ const BtnHeader = styled.button`
   }
 `;
 
-
+export default Header;

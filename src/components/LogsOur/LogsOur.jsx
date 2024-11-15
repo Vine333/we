@@ -1,54 +1,29 @@
 import React from 'react';
-import logo1 from '../img/4.svg'
-import logo2 from '../img/6.svg'
-import logo3 from '../img/3.svg'
-import logo4 from '../img/5.svg'
-import logo5 from '../img/1.svg'
-import logo6 from '../img/2.svg'
-
+import {Logo1,Logo2,Logo3,Logo4,Logo5,Logo6} from "../../assets/SVG/index.js"
 import {styled} from 'styled-components'
 
 
-export default function LogsOur() {
+const LogsOur = ()=> {
     return (<Wrapper>
-        <Conteiner>
-        <h2>
+        <div className='Container'>
+        <h2 className='OurClients'>
             Our Clients
         </h2>
-        <p>
+        <p className='Paragraph'>
             We have been working with some Fortune 500+ clients
         </p>
-        <div>
-            <img src={logo1}/>
-            <img src={logo2}/>
-            <img src={logo3}/>
-            <img src={logo4}/>
-            <img src={logo5}/>
-            <img src={logo6}/>
-            <img src={logo3}/>
+        <div className='Logs'>
+            <Logo1/>
+            <Logo2/>
+            <Logo3/>
+            <Logo4/>
+            <Logo5/>
+            <Logo6/>
+            <Logo3/>
         </div>
-        </Conteiner>
+        </div>
     </Wrapper>);
 };
-const Conteiner = styled.div`
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  
-  h2{
-  padding-top: 20px;
-  margin-bottom: -15px;
-  padding-bottom: 20px;
-}
-  p{
-    padding: 10px;
-  }
-  div{
-    display: flex;
-    justify-content: space-evenly;
-  }
-`
 
 const Wrapper = styled.div`
   display: flex;
@@ -57,6 +32,25 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
+  .Container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .OurClients{
+    padding-top: 20px;
+    margin-bottom: -15px;
+    padding-bottom: 20px;
+  }
+  .Paragraph{
+    padding: 10px;
+  }
+  .Logs{
+    display: flex;
+    justify-content: space-evenly;
+  }
   
 `
+export default LogsOur;
 

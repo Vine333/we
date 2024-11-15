@@ -1,14 +1,11 @@
 import React from 'react';
-import Click from '../img/click.svg'
-import People from '../img/people.svg'
-import Heands from '../img/heands.svg'
-import Wallet from '../img/wallet.svg'
+import {ICWallet,ICHeandsAchivs,ICPeopleAchivs,ICClick} from "../../assets/Icons/index.js"
 import styled from 'styled-components'
 
 
 const Achievements = () => {
     return (<Wrapper>
-        <Container>
+        <div className="Container">
             <div className="text">
                 <span>Helping a local </span><br/>
                 <span className="business">business reinvent itself</span><br/>
@@ -18,7 +15,7 @@ const Achievements = () => {
                 <div className="det">
                     <div className="names">
                         <div className="logoFoto">
-                            <img src={People} alt=""/>
+                            <ICPeopleAchivs alt=""/>
                         </div>
                         <div className="count">
                             <h1>2,245,341</h1>
@@ -27,7 +24,7 @@ const Achievements = () => {
                     </div>
                     <div className="names">
                         <div className="logoFoto">
-                            <img src={Click} alt=""/>
+                            <ICClick alt=""/>
                         </div>
                         <div className="count">
                             <h1>828,867</h1>
@@ -38,7 +35,7 @@ const Achievements = () => {
                 <div className="det2">
                     <div className="names">
                         <div className="logoFoto">
-                            <img src={Heands}/>
+                            <ICHeandsAchivs/>
                         </div>
                         <div className="count">
                             <h1>46,328</h1>
@@ -47,7 +44,7 @@ const Achievements = () => {
                     </div>
                     <div className="names">
                         <div className="logoFoto">
-                            <img src={Wallet}/>
+                            <ICWallet/>
                         </div>
                         <div className="count">
                             <h1>
@@ -59,12 +56,12 @@ const Achievements = () => {
                 </div>
 
             </div>
-        </Container>
+        </div>
 
     </Wrapper>);
 };
 
-export default Achievements;
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -74,16 +71,17 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
-`
-const Container = styled.div`
-  display: flex;
-  width: 80%;
-  flex-direction: row;
-  color: #1a1a1a;
-  padding: 5px;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 90px;
+
+  .Container {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    color: #1a1a1a;
+    padding: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 90px;
+  }
 
   .weReached {
     font-size: 16px;
@@ -109,12 +107,14 @@ const Container = styled.div`
     padding-top: 30px;
     padding-right: 15px;
   }
-.details{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 50%;
-}
+
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+  }
+
   .det {
     display: flex;
     flex-direction: column;
@@ -142,36 +142,40 @@ const Container = styled.div`
   }
 
   @media (max-width: 1024px) {
-   
-    .details{
+
+    .details {
       order: 2;
       flex-direction: row;
       justify-content: space-between;
       width: 70%;
     }
 
-    
 
     .text {
       order: 1
     }
 
-    flex-direction: column;
+    .Container {
+      flex-direction: column;
+    }
+   
   }
-  @media(max-width: 700px){
-    .details{
+  @media (max-width: 700px) {
+    .details {
       flex-direction: column;
       order: 2;
       justify-content: center;
       align-items: center;
     }
-    .det1{
-  
+
+    .det1 {
+
       flex-direction: column;
     }
-    .det2{
-     
+
+    .det2 {
+
       flex-direction: column;
     }
 `
-
+export default Achievements;

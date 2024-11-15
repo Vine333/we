@@ -4,9 +4,9 @@ import Card from "../Card/Card.jsx";
 
 const Manage = () => {
     return (<Wrapper>
-        <Conteiner>
-            <div>
-                <h2>
+        <div className='Container'>
+            <div className='Manage'>
+                <h2 className='Headline'>
                     Manage your entire community<br/>
                     in a single system
 
@@ -14,7 +14,7 @@ const Manage = () => {
                 <p>Who is Nexcent suitable for?</p>
             </div>
             <Card/>
-        </Conteiner>
+        </div>
     </Wrapper>);
 };
 const Wrapper = styled.div`
@@ -24,20 +24,13 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
+  .Manage{
+    padding-top: 20px;
+  }
+  .Headline{
+    font-size: 30px;
+    margin-bottom: -15px;
+    padding: 20px;
+  }
 `
-const Conteiner = styled.div`
-div{
- padding-top: 20px;
-}
-h2{
-  font-size: 30px;
-  margin-bottom: -15px;
-  padding: 20px;
-}
-`
-
-
-
-
-
 export default Manage;

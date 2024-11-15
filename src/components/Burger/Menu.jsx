@@ -4,8 +4,21 @@ import Button from "../Button/Button.jsx";
 import styled from 'styled-components'
 
 
+const Menu = ({open}) => {
+    return (<MenuWrapper open={open}>
+
+        <MenuLink href='#'>Home</MenuLink>
+        <MenuLink href='#'>Features</MenuLink>
+        <MenuLink href='#'>Community</MenuLink>
+        <MenuLink href='#'>Blog</MenuLink>
+        <MenuLink href='#'>Pricing</MenuLink>
+        <Button>Register Now🠒</Button>
+
+    </MenuWrapper>);
+};
+
 const MenuWrapper = styled.div`
-  display: ${({ open}) => ( open ? 'flex' : 'none')};
+  display: ${({open}) => (open ? 'flex' : 'none')};
   background-color: white;
   position: absolute;
   top: 70px;
@@ -14,7 +27,7 @@ const MenuWrapper = styled.div`
   border: 1px solid #ccc;
   z-index: 1000;
 
-  ${({ open }) => open&& `
+  ${({open}) => open && `
     flex-direction: column;
     width: 150px;
     color: black;
@@ -29,22 +42,7 @@ const MenuLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    background-color: #ddd; 
+    background-color: #ddd;
   }
 `;
-
-const Menu = ({ open }) => {
-    return (
-        <MenuWrapper open={open}>
-
-                <MenuLink href='#'>Home</MenuLink>
-                <MenuLink href='#'>Features</MenuLink>
-                <MenuLink href='#'>Community</MenuLink>
-                <MenuLink href='#'>Blog</MenuLink>
-                <MenuLink href='#'>Pricing</MenuLink>
-                <Button>Register Now🠒</Button>
-
-        </MenuWrapper>
-    );
-};
 export default Menu;

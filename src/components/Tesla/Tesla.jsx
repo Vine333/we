@@ -1,23 +1,17 @@
 import React from 'react';
-import TeslaF from '../img/tesla.svg'
-import logo1 from '../img/4.svg'
-import logo2 from '../img/6.svg'
-import logo3 from '../img/3.svg'
-import logo4 from '../img/5.svg'
-import logo5 from '../img/1.svg'
-import logo6 from '../img/2.svg'
 import {styled} from 'styled-components'
+import {TeslaPictures, Logo1, Logo2, Logo3, Logo4, Logo5, Logo6} from "../../assets/SVG/index.js";
 
 const Tesla = () => {
     return (
 
         <Wrapper>
-            <Conteiner>
+            <div className='Container'>
                 <div className="tesla">
-                    <img src={TeslaF}/>
+                    <TeslaPictures className='img'/>
                 </div>
                 <div className="text">
-                    <div >
+                    <div>
                         Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum
                         risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam
                         in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula
@@ -33,17 +27,17 @@ const Tesla = () => {
 
                     </div>
                     <div className='logoTeslaCont'>
-                        <img src={logo1}/>
-                        <img src={logo2}/>
-                        <img src={logo3}/>
-                        <img src={logo4}/>
-                        <img src={logo5}/>
-                        <img src={logo6}/>
+                        <Logo4/>
+                        <Logo6/>
+                        <Logo3/>
+                        <Logo5/>
+                        <Logo1/>
+                        <Logo2/>
                         <a href="#">Meet all customers 🠒</a>
                     </div>
 
                 </div>
-            </Conteiner>
+            </div>
         </Wrapper>
 
     );
@@ -55,30 +49,28 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   padding: 5px;
-  //border: 1px solid black;
- 
- 
-`
-const Conteiner = styled.div`
-  display: flex;
-  width: 80%;
-  flex-direction: row;
-  color: #1a1a1a;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  
-  padding: 20px;
-  .tesla{
-    
-    
-    width: 30%;
-    
-    img{
-     scale: 2;
-    }
+
+  .Container {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    color: #1a1a1a;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
   }
-  .text{
+
+  .tesla {
+    width: 42%;
+  }
+
+  .img {
+    scale: 2;
+  }
+
+  .text {
     display: flex;
 
     flex-direction: column;
@@ -87,37 +79,41 @@ const Conteiner = styled.div`
     gap: 20px;
     width: 70%;
   }
-  .TimSmith{
+
+  .TimSmith {
     color: #28cb8b;
     padding-bottom: 20px;
   }
-  .logoTeslaCont{
+
+  .logoTeslaCont {
     display: flex;
     justify-content: space-between;
-    a{
+
+    a {
       padding-top: 5px;
       color: #28cb8b;
     }
   }
-  @media (max-width:1024px ) {
-    
+
+  @media (max-width: 1024px ) {
+    .Container {
       justify-content: center;
       flex-wrap: wrap;
       padding-top: 50px;
       flex-direction: column;
-      
-    .text{
+    }
+
+    .text {
       order: 2;
       padding-top: 60px;
       width: 100%;
-    } 
-    .tesla{
+    }
+
+    .tesla {
       order: 1;
-      padding-top: 20px;
+      padding-right:100px;
     }
   }
-  
 `
-
 
 export default Tesla;

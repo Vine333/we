@@ -1,14 +1,13 @@
 import React from 'react';
 import Button from "../Button/Button.jsx";
 import styled from 'styled-components';
-import Frame35 from "../img/Frame 35.svg";
-import HowToDesign from "../img/how to desing.svg";
+import {HowToDesign,LogoPass} from "../../assets/SVG/index.js"
 
 export const ways = [{
     id: 1,
     title: 'The unseen of spending there',
     hd: 'years at Pixelgrade',
-    image: Frame35,
+    image:LogoPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio"
 }, {
     id: 2,
@@ -21,16 +20,16 @@ export const ways = [{
 
 
 const PictureAndText = ({item}) => {
-    const {title, hd, image, description} = item;
+    const {title, hd, image: ImageComponet, description} = item;
     return (<Wrapper>
 
-        <Container>
-            <div >
-                <img src={image}/>
+        <div className='Container'>
+            <div className='img' >
+                <ImageComponet className='img'/>
             </div >
-            <div>
-                <h2>{title}<br/>{hd}</h2>
-                <p>{description}
+            <div className='Description'>
+                <h2 className='Headline'>{title}<br/>{hd}</h2>
+                <p className='Paragraph'>{description}
                 </p>
                 <div>
                     <Button>
@@ -39,7 +38,7 @@ const PictureAndText = ({item}) => {
 
                 </div>
             </div>
-        </Container>
+        </div>
 
     </Wrapper>);
 };
@@ -50,9 +49,7 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
-
-`
-const Container = styled.div`
+.Container{
   display: flex;
   width: 80%;
   flex-direction: row;
@@ -63,48 +60,42 @@ const Container = styled.div`
   padding-top: 20px;
   padding-bottom: 20px;
   max-width: 1300px;
-  @media (max-width: 1024px) {
+}
+  .img{
+    width: 300px;
+    height: 300px;
+  }
+  .Description{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      order: 2;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .Headline{
+    font-size: 28px;
+  }
+  .Paragraph{
+    font-size: 16px;
+    padding-bottom:20px;
+  }
+  @media (max-width: 1024px){
+    .Container{
+      flex-direction: column;
+    }
+    .img{
+      order: 1;
       scale: 2;
-      padding-right: 0px;
+      padding-right: 0;
       padding-bottom: 60px;
-      padding-top: 90px;
+      padding-top: 100px;
       width: 100%;
     }
-    div{
+    .Description{
       order: 2;
       padding-left: 0;
       padding-top: 80px;
       align-items: center;
     }
   }
-
-  img {
-    
-    width: 300px;
-    height: 300px;
-  }
-  div{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-
-    h2 {
-      font-size: 28px;
-    }
-
-    p {
-      font-size: 16px;
-      padding-bottom:20px;
-    }
-
-  }
 `
-
 export default PictureAndText;
